@@ -120,6 +120,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "burger"
+    }
+  },
+  "defaultProject": "burger",
+  "cli": {
+    "analytics": "04d46251-1c7e-4398-ab42-2af98e153b67"
+  }
 }

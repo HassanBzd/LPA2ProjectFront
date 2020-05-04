@@ -1,0 +1,10 @@
+<p>burger-list works!</p>
+<div>
+    <h4>Burgers</h4>
+    <ul id="burgers">
+      <li *ngFor="let burger of burgers">
+        <p>{{burger.id}} => {{burger.name}} = {{burger.price}} €</p>
+        <img width=300 src="{{burger.image}}"/>
+      </li>
+    </ul>
+  </div>
