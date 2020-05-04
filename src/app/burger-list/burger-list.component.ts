@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BurgersService } from '../../../angular_client/api/burgers.service';
+import { Burger } from 'angular_client';
 
 
 @Component({
@@ -9,7 +10,7 @@ import { BurgersService } from '../../../angular_client/api/burgers.service';
 })
 export class BurgerListComponent implements OnInit {
 
-  burgers;
+  burgers:Burger[];
   constructor(private burgersService : BurgersService) { }
 
   ngOnInit(): void {
@@ -17,7 +18,7 @@ export class BurgerListComponent implements OnInit {
   }
 
   getBurgers() : void {
-    this.burgers = this.burgersService.listBurgers()
+    this.burgersService.listBurgers()
         .subscribe(burgers => this.burgers = burgers);
   }
 
